@@ -8,7 +8,7 @@ import Events from "../pages/Events";
 import Contacts from "../pages/Contacts";
 import Program from "../pages/Program";
 import Catalog from "../pages/Catalog";
-import Gallery from "../pages/Gallery";
+import BooksPage from "../pages/BooksPage";
 import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "gallery",
-        element: <Gallery />,
+        path: "books",
+        element: <BooksPage />,
       },
       {
         path: "events",

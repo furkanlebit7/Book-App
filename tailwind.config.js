@@ -8,6 +8,12 @@ module.exports = {
         tRed: "#AD4029",
         tBrown: "#614134",
       },
+      scale: {
+        10: ".3",
+      },
+      maxHeight: {
+        128: "40rem",
+      },
     },
   },
   plugins: [],

@@ -18,16 +18,16 @@ const Header = ({ to }) => {
 
   return (
     <div className="flex items-center justify-between">
-      <div className="border-b-black border-b flex-1 mr-16">
-        <ul className="flex items-center justify-around font-medium text-lg text-tBrown cursor-pointer  ">
+      <div className="border-b-black border-b lg:w-1/2 lg:flex-none flex-auto mr-16 ">
+        <ul className="flex items-center justify-around font-medium text-md text-tBrown cursor-pointer  ">
           <Link to="/" className={activePath === "/" ? active : liClass}>
             <li>HOME</li>
           </Link>
           <Link
-            to="/gallery"
-            className={activePath === "/gallery" ? active : liClass}
+            to="/books"
+            className={activePath === "/books" ? active : liClass}
           >
-            <li>GALLERY</li>
+            <li>BOOKS</li>
           </Link>
           <Link
             to="/events"
