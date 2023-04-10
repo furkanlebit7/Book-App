@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchBooks = createAsyncThunk("books/getBooks", async () => {
-  const input = "flowers";
+  const input = "valorant";
   const startIndex = 12;
   const maxResults = 40;
   const { data } = await axios.get(

@@ -25,7 +25,7 @@ const BooksPage = () => {
       <div className="w-full ">
         <hr className="mb-3 border-tBrown border" />
         <div className="w-full">
-          <ul className="grid grid-cols-5 gap-6 ">
+          <ul className="grid grid-cols-5 gap-6 auto-rows-fr">
             {allBooks.data.items.map((book) => (
               <Link>
                 <li
@@ -37,11 +37,11 @@ const BooksPage = () => {
                   </h1>
 
                   <img
-                    className="max-h-min border-4 border-tRed my-3"
+                    className="max-h-min border-4 border-tRed my-3 w-32"
                     src={
-                      book.volumeInfo.imageLinks.thumbnail
+                      book.volumeInfo.imageLinks
                         ? book.volumeInfo.imageLinks.thumbnail
-                        : ""
+                        : "https://www.yesilaymarket.com/Data/EditorFiles/urun-gorseli-hazirlaniyor.svg"
                     }
                   />
 
