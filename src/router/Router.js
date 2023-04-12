@@ -10,6 +10,7 @@ import Program from "../pages/Program";
 import Catalog from "../pages/Catalog";
 import BooksPage from "../pages/BooksPage";
 import ErrorPage from "../pages/ErrorPage";
+import BookDetail from "../pages/BookDetail";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "catalog",
         element: <Catalog />,
+      },
+      {
+        path: "book/:id",
+        element: <BookDetail />,
       },
     ],
   },

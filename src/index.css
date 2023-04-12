@@ -8,6 +8,18 @@ body {
   font-family: "Slabo 13px", serif;
 }
 
-div::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+/* SCROLLBAR */
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f1debe;
+}
+body ::-webkit-scrollbar-track {
+  background-color: black;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #614134;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #ad4029;
 }

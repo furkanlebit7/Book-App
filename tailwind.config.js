@@ -7,6 +7,7 @@ module.exports = {
         bgMain: "#F1DEBE",
         tRed: "#AD4029",
         tBrown: "#614134",
+        tBrownLight: "rgba(97, 65, 52, 0.08)",
       },
       scale: {
         10: ".3",
