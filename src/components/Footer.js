@@ -7,9 +7,9 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 const Footer = () => {
   return (
-    <div className="border-t border-black pt-9 pl-10 flex items-center">
+    <div className="border-t border-tBrown pt-9 flex items-center justify-center">
       <p className="text-tBrown">FOLLOW ME HERE:</p>
-      <ul className="flex ml-10">
+      <ul className="flex md:ml-10 flex-col sm:flex-row ">
         <a
           href="https://github.com/furkanlebit7"
           className="ml-10"

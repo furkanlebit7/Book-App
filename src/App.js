@@ -9,7 +9,7 @@ function App() {
     <div className="bg-bgMain min-h-screen">
       <div className="container py-10 mx-auto min-h-screen flex flex-col">
         <Header />
-        <div className="grow py-10 flex">
+        <div className="grow py-10 ">
           <Outlet />
         </div>
         <Footer />

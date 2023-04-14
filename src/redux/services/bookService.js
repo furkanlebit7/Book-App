@@ -12,3 +12,12 @@ export const fetchBooks = createAsyncThunk(
     return data;
   }
 );
+export const fetchBookDetail = createAsyncThunk(
+  "books/getBookDetails",
+  async (id) => {
+    const { data } = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes/${id}`
+    );
+    return data;
+  }
+);

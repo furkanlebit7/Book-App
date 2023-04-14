@@ -31,11 +31,16 @@ const FilterBar = () => {
     labelClass: "block text-gray-700 text-sm font-bold mb-2",
   };
   return (
-    <div>
-      <form className="flex flex-col">
-        <div className="flex items-center justify-between">
-          <div className={`${classes.inputContainerClass} flex-1`}>
-            <label className={classes.labelClass} htmlFor="username">
+    <div className="border-b border-tBrown pb-9">
+      <form
+        className="flex flex-col mx-6 md:mx-0"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <div className="flex items-center justify-between flex-wrap md:flex-nowrap">
+          <div
+            className={`${classes.inputContainerClass} flex-auto w-full md:w-fit `}
+          >
+            <label className={classes.labelClass} htmlFor="Search">
               Search
             </label>
             <input
@@ -49,7 +54,7 @@ const FilterBar = () => {
               placeholder="Search book or author"
             />
           </div>
-          <div className={`${classes.inputContainerClass} mx-2`}>
+          <div className={`${classes.inputContainerClass} md:mx-2`}>
             <label className={classes.labelClass} htmlFor="filter">
               Filter
             </label>

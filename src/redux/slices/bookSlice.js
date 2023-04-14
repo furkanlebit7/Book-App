@@ -1,9 +1,13 @@
 //PACKAGES
 import { createSlice } from "@reduxjs/toolkit";
 //DOCS
-import { fetchBooks } from "../services/bookService";
+import { fetchBookDetail, fetchBooks } from "../services/bookService";
 
 const initialState = {
+  bookDetail: {
+    data: [],
+    status: "idle",
+  },
   filterList: {},
   allBooks: {
     data: [],
@@ -29,6 +33,15 @@ const BooksSlice = createSlice({
       state.allBooks.data = action.payload;
       state.allBooks.status = "succeeded";
     });
+
+    //FETCH BOOK DETAIL
+    builder.addCase(fetchBookDetail.pending, (state) => {
+      state.bookDetail.status = "loading";
+    });
+    builder.addCase(fetchBookDetail.fulfilled, (state, action) => {
+      state.bookDetail.data = action.payload;
+      state.bookDetail.status = "succeeded";
+    });
   },
 });
 export default BooksSlice.reducer;
@@ -38,4 +51,5 @@ export const { setFilterList } = BooksSlice.actions;
 
 //STATE CALLS
 export const getBooks = (state) => state.books.allBooks;
+export const getBookDetail = (state) => state.books.bookDetail;
 export const getFilterList = (state) => state.books.filterList;

@@ -18,7 +18,7 @@ const Header = ({ to }) => {
 
   return (
     <div className="flex items-center justify-between">
-      <div className="border-b-black border-b lg:w-1/3 lg:flex-none flex-auto mr-16 ">
+      <div className="border-b-black border-b lg:w-1/3 lg:flex-none flex-auto lg:mr-16 ">
         <ul className="flex items-center justify-around font-medium text-md text-tBrown cursor-pointer  ">
           <Link to="/" className={activePath === "/" ? active : liClass}>
             <li>HOME</li>

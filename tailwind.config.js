@@ -12,8 +12,8 @@ module.exports = {
       scale: {
         10: ".3",
       },
-      maxHeight: {
-        128: "40rem",
+      width: {
+        128: "400px",
       },
     },
   },
