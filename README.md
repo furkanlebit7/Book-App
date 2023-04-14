@@ -1,4 +1,4 @@
-# ⛅ Weather App with React
+# 📖 Books App with React
 
 - Patika.dev Frontend Projects : Book App
 
@@ -44,6 +44,7 @@ npm start or yarn start
 :heavy_check_mark: Book Search<br />
 :heavy_check_mark: Filter Books<br />
 :heavy_check_mark: Book Details<br />
+:heavy_check_mark: Mobile Version<br />
 
 ## :fire: Technologies and Libraries
 
