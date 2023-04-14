@@ -1,67 +1,113 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useDebounce } from "use-debounce";
+import { fetchBooks } from "../../redux/services/bookService";
+import { setFilterList } from "../../redux/slices/bookSlice";
 
 const FilterBar = () => {
-  const dropdownClass =
-    "block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500";
-  const inputContainerClass = "mb-4";
-  const formClass =
-    "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline";
-  const labelClass = "block text-gray-700 text-sm font-bold mb-2";
+  const dispatch = useDispatch();
+
   const [initialValues, setInitialValues] = useState({
-    text: "a",
-    filter: "all",
+    text: "",
+    filter: "partial",
     startIndex: 0,
     maxResults: 40,
     printType: "all",
     orderBy: "relevance",
   });
+  const [values] = useDebounce(initialValues, 1000);
+
+  useEffect(() => {
+    dispatch(fetchBooks(values));
+    dispatch(setFilterList(values));
+  }, [values]);
+
+  const classes = {
+    dropdownClass:
+      "block appearance-none w-full border border-tBrown text-tBrown py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 bg-transparent focus:bg-transparent",
+    inputContainerClass: "mb-4 ",
+    formClass:
+      "shadow appearance-none border rounded w-full py-3 px-3 text-tBrown leading-tight focus:outline-none focus:shadow-outline bg-transparent border-tBrown",
+    labelClass: "block text-gray-700 text-sm font-bold mb-2",
+  };
   return (
     <div>
-      <form className="flex items-center justify-between">
-        <div className={inputContainerClass}>
-          <label className={labelClass} htmlFor="username">
-            Search
-          </label>
-          <input
-            className={formClass}
-            type="text"
-            name="text"
-            placeholder="Search book or author"
-          />
-        </div>
-        <div className={inputContainerClass}>
-          <label className={labelClass} htmlFor="filter">
-            Filter
-          </label>
-          <select name="filter" className={dropdownClass}>
-            <option value="all">All</option>
-            <option value="partial">Partial</option>
-            <option value="full">Full</option>
-            <option value="free-ebooks">Free Ebooks</option>
-            <option value="paid-ebooks">Paid Ebooks</option>
-            <option value="ebooks">Ebooks</option>
-          </select>
-        </div>
+      <form className="flex flex-col">
+        <div className="flex items-center justify-between">
+          <div className={`${classes.inputContainerClass} flex-1`}>
+            <label className={classes.labelClass} htmlFor="username">
+              Search
+            </label>
+            <input
+              onChange={(e) =>
+                setInitialValues({ ...initialValues, text: e.target.value })
+              }
+              value={initialValues.text}
+              className={classes.formClass}
+              type="text"
+              name="text"
+              placeholder="Search book or author"
+            />
+          </div>
+          <div className={`${classes.inputContainerClass} mx-2`}>
+            <label className={classes.labelClass} htmlFor="filter">
+              Filter
+            </label>
+            <select
+              onChange={(e) =>
+                setInitialValues({ ...initialValues, filter: e.target.value })
+              }
+              name="filter"
+              className={classes.dropdownClass}
+              value={initialValues.filter}
+            >
+              <option value="partial">Partial</option>
+              <option value="full">Full</option>
+              <option value="free-ebooks">Free Ebooks</option>
+              <option value="paid-ebooks">Paid Ebooks</option>
+              <option value="ebooks">Ebooks</option>
+            </select>
+          </div>
 
-        <div className={inputContainerClass}>
-          <label className={labelClass} htmlFor="printType">
-            Print Type
-          </label>
-          <select name="printType" className={dropdownClass}>
-            <option value="all">All</option>
-            <option value="books">Partial</option>
-            <option value="magazines">Full</option>
-          </select>
-        </div>
-        <div className={inputContainerClass}>
-          <label className={labelClass} htmlFor="orderBy">
-            Order By
-          </label>
-          <select name="orderBy" className={dropdownClass}>
-            <option value="relevance">All</option>
-            <option value="newest">Partial</option>
-            <option value="magazines">Full</option>
-          </select>
+          <div className={`${classes.inputContainerClass} mr-2`}>
+            <label className={classes.labelClass} htmlFor="printType">
+              Print Type
+            </label>
+            <select
+              onChange={(e) =>
+                setInitialValues({
+                  ...initialValues,
+                  printType: e.target.value,
+                })
+              }
+              name="printType"
+              className={classes.dropdownClass}
+              value={initialValues.printType}
+            >
+              <option value="all">All</option>
+              <option value="books">Books</option>
+              <option value="magazines">Magazines</option>
+            </select>
+          </div>
+          <div className={classes.inputContainerClass}>
+            <label className={classes.labelClass} htmlFor="orderBy">
+              Order By
+            </label>
+            <select
+              onChange={(e) =>
+                setInitialValues({
+                  ...initialValues,
+                  orderBy: e.target.value,
+                })
+              }
+              name="orderBy"
+              className={classes.dropdownClass}
+              value={initialValues.orderBy}
+            >
+              <option value="relevance">Relevance</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
         </div>
       </form>
     </div>

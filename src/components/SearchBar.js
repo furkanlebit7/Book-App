@@ -11,7 +11,6 @@ const SearchBar = () => {
   useEffect(() => {
     dispatch(fetchBooks({ text: text, printType: "all" }));
   }, [dispatch, value]);
-
   return (
     <div className="flex ">
       <div>
