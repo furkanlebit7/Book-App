@@ -8,6 +8,7 @@ const BookCard = ({ book }) => {
         <img
           className="border-4 border-tRed my-3 h-44"
           alt="Book Cover"
+          loading="lazy"
           src={
             book.volumeInfo.imageLinks
               ? book.volumeInfo.imageLinks.thumbnail

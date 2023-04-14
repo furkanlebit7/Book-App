@@ -7,10 +7,11 @@ const Pagination = () => {
   const [page, setPage] = useState(0);
   const allBooks = useSelector(getBooks);
   const dispatch = useDispatch();
+  console.log(page);
 
   return (
     <div className="flex justify-end border-t-2 border-tRed pt-2">
-      {[...Array(allBooks.data.totalItems).slice(0, 5)].map((item, i) => {
+      {[...Array(2).slice(0, 5)].map((item, i) => {
         if (page === i) {
           return (
             <button
