@@ -1,71 +1,64 @@
-# Getting Started with Create React App
+# ⛅ Weather App with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Patika.dev Frontend Projects : Book App
 
-## Available Scripts
+## ➡️ Live Demo
 
-In the project directory, you can run:
+[https://furkanlebit7-book-app.netlify.app](https://furkanlebit7-book-app.netlify.app)
 
-### `npm start`
+## :key: Get API key
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[https://developers.google.com/books/docs/overview?hl=tr](https://developers.google.com/books/docs/overview?hl=tr)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Accesses Your Own API key.
+- REACT_APP_BOOKS_API_KEY=your-api
 
-### `npm test`
+API Links <br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [https://www.googleapis.com/books/v1/volumes?q=search+terms](https://www.googleapis.com/books/v1/volumes?q=search+terms)
+- [https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey](https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey)
 
-### `npm run build`
+## :computer: Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository and install its features.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install or yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Create .env and add the follow key.
 
-### `npm run eject`
+```
+add project .env file and the follow key (REACT_APP_API_KEY=your-api)
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Use the project locally (localhost).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm start or yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+:heavy_check_mark: Redux State Management<br />
+:heavy_check_mark: Book Search<br />
+:heavy_check_mark: Filter Books<br />
+:heavy_check_mark: Book Details<br />
 
-## Learn More
+## :fire: Technologies and Libraries
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:point_right: React.js <br />
+:point_right: React Hooks <br />
+:point_right: Redux <br />
+:point_right: Redux Toolkit <br />
+:point_right: React Router <br />
+:point_right: Axios <br />
+:point_right: Use Debounce <br />
+:point_right: React Icons <br />
+:point_right: Tailwind CSS <br />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshot
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# Book-App" 
+![Home Page](https://user-images.githubusercontent.com/59422278/232061626-171f44a6-f6e2-4385-b757-33c852582e57.png)
+![Books Page](https://user-images.githubusercontent.com/59422278/232061638-96294c35-eb7a-43df-87d2-8dd57cfa29a3.png)
+![Book Detail Page](https://user-images.githubusercontent.com/59422278/232061647-90274f79-f0be-456b-90b8-1632b54df874.png)
