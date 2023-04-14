@@ -15,7 +15,7 @@ const BookList = () => {
   if (allBooks.status === "succeeded" && allBooks.data.items) {
     return (
       <div className="w-full my-2">
-        <ul className="grid grid-cols-5 gap-6 auto-rows-fr my-5">
+        <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 auto-rows-fr my-5 mx-5 sm:mx-0">
           {allBooks.data.items.map((book) => (
             <BookCard book={book} key={book.id} />
           ))}

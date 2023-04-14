@@ -18,7 +18,7 @@ const Header = ({ to }) => {
 
   return (
     <div className="flex items-center justify-between">
-      <div className="border-b-black border-b lg:w-1/2 lg:flex-none flex-auto mr-16 ">
+      <div className="border-b-black border-b lg:w-1/3 lg:flex-none flex-auto mr-16 ">
         <ul className="flex items-center justify-around font-medium text-md text-tBrown cursor-pointer  ">
           <Link to="/" className={activePath === "/" ? active : liClass}>
             <li>HOME</li>
@@ -29,7 +29,7 @@ const Header = ({ to }) => {
           >
             <li>BOOKS</li>
           </Link>
-          <Link
+          {/* <Link
             to="/events"
             className={activePath === "/events" ? active : liClass}
           >
@@ -53,10 +53,12 @@ const Header = ({ to }) => {
             className={activePath === "/catalog" ? active : liClass}
           >
             <li>CATALOG</li>
-          </Link>
+          </Link> */}
         </ul>
       </div>
-      <div>
+
+      {/* SEARCH INPUT */}
+      {/* <div>
         <div className="border border-black flex items-center rounded-3xl pl-3">
           <input
             type="text"
@@ -66,7 +68,7 @@ const Header = ({ to }) => {
             SEARCH
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
