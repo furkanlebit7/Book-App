@@ -79,20 +79,30 @@ const BookDetail = () => {
         </ul>
         <p className="mt-2">
           <span className="text-tRed font-bold mr-2">Page Count : </span>
-          {bookDetail.data.volumeInfo.pageCount}
+          {bookDetail.data.volumeInfo.pageCount
+            ? bookDetail.data.volumeInfo.pageCount
+            : ""}
         </p>
         <p className="mt-2">
           <span className="text-tRed font-bold mr-2">Language : </span>
-          {bookDetail.data.volumeInfo.language.toUpperCase()}
+          {bookDetail.data.volumeInfo.language
+            ? bookDetail.data.volumeInfo.language.toUpperCase()
+            : ""}
         </p>
         <p className="mt-2">
           <span className="text-tRed font-bold mr-2">Published Date : </span>
-          {bookDetail.data.volumeInfo.publishedDate}
+          {bookDetail.data.volumeInfo.publishedDate
+            ? bookDetail.data.volumeInfo.publishedDate
+            : ""}
         </p>
         <p className="mt-2">
           <span className="text-tRed font-bold mr-2">Price : </span>
-          {bookDetail.data.saleInfo.retailPrice.amount}{" "}
-          {bookDetail.data.saleInfo.retailPrice.currencyCode}
+          {bookDetail.data.saleInfo.retailPrice.amount
+            ? bookDetail.data.saleInfo.retailPrice.amount
+            : ""}{" "}
+          {bookDetail.data.saleInfo.retailPrice.currencyCode
+            ? bookDetail.data.saleInfo.retailPrice.currencyCode
+            : ""}
         </p>
       </div>
     </div>
