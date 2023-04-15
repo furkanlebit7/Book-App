@@ -11,8 +11,6 @@ const BookDetail = () => {
 
   const { id } = useParams();
 
-  console.log(bookDetail);
-
   useEffect(() => {
     dispatch(fetchBookDetail(id));
   }, [id]);
@@ -97,10 +95,10 @@ const BookDetail = () => {
         </p>
         <p className="mt-2">
           <span className="text-tRed font-bold mr-2">Price : </span>
-          {bookDetail.data.saleInfo.retailPrice.amount
+          {bookDetail.data.saleInfo.retailPrice
             ? bookDetail.data.saleInfo.retailPrice.amount
-            : ""}{" "}
-          {bookDetail.data.saleInfo.retailPrice.currencyCode
+            : "unknown"}{" "}
+          {bookDetail.data.saleInfo.retailPrice
             ? bookDetail.data.saleInfo.retailPrice.currencyCode
             : ""}
         </p>
