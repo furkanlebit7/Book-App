@@ -11,7 +11,7 @@ const Footer = () => {
       <p className="text-tBrown">FOLLOW ME HERE:</p>
       <ul className="flex md:ml-10 flex-col sm:flex-row ">
         <a
-          href="https://github.com/furkanlebit7"
+          href="https://github.com/furkanlebit7/Book-App"
           className="ml-10"
           target="_blank"
           rel="noreferrer"
